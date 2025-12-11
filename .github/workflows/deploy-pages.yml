@@ -27,7 +27,7 @@ jobs:
       - name: 部署到 GitHub Pages
         uses: peaceiris/actions-gh-pages@v4  # 第三方部署动作，稳定可靠
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # 自动生成的令牌，无需手动配置
+          github_token: ${{ secrets.GH_PAGES_TOKEN }}  # 自动生成的令牌，无需手动配置
           publish_dir: ./dist  # 要部署的目录（即静态文件所在目录）
           publish_branch: gh-pages  # 必须指定部署到 gh-pages 分支（GitHub Pages 专用分支）
           force_orphan: true  # 清空 gh-pages 分支历史，避免冲突（推荐开启）
